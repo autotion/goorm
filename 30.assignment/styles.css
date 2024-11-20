@@ -1,0 +1,67 @@
+/* 기본 스타일 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414; 
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 스타일 */
+.logo img {
+    padding: 10px;
+    width: 100px;
+    height: auto;
+}
+
+/* 유저 아이콘 스타일 */
+.user img {
+    width: 40px;
+    height: auto;
+
+}
+
+/* 포스터 섹션 */
+.poster {
+    margin-top: 80px; /* 고정된 헤더 아래 여백 확보 */
+    padding: 20px;
+}
+
+.poster h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* 영화 카드 컨테이너 */
+.movie-container {
+    display: flex;
+    justify-content: space-between; /* 영화 카드 간격 */
+    gap: 10px; /* 카드 사이 여백 */
+    flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 */
+}
+
+/* 영화 카드 */
+.movie-container div {
+    flex: 1 1 calc(14.28% - 10px); /* 7개 카드 나열, 여백 포함 */
+    max-width: calc(14.28% - 10px); /* 최대 너비 */
+    box-sizing: border-box;
+}
+
+.movie-container img {
+    width: 100%; /* 카드 이미지 크기 */
+    border-radius: 8px; /* 부드러운 모서리 */
+    transition: transform 0.3s; /* 마우스 오버 애니메이션 */
+}
+
+/* 카드 마우스 오버 효과 */
+.movie-container img:hover {
+    transform: scale(1.1); /* 확대 효과 */
+    cursor: pointer;
+}
